@@ -1,90 +1,77 @@
-# Galaxy Pets: Collect and Train Your Cosmic Companions
-
-For this programming assignment in Java, you are stepping into the shoes of a cosmic trainer, embarking on a journey through the universe to collect and train Galaxy Pets. These are mythical creatures with unique abilities and attributes that you'll be modeling in Java.
+# DinoPark Java Programming Task
 
 ## Deadline
-This assignment is due before the next scheduled class.
+Submit this task before the next exercise session.
 
 ## Instructions
-For instructions on how to complete and submit this assignment, please refer to the assignments section of the course instructions reachable via [assignments section of our course webpage](https://assignments.example.com).
+Follow the course instructions for submitting assignments, which can be found in the assignments section of the course instructions.
 
 ## Preparation
-
-- Complete and understand all questions in Module 2: "Exploring Object-Oriented Programming".
-- Access the OLI material through Canvas or directly via [programming course materials](https://programmingmaterials.example.com).
-
-Note: The OLI material and tasks this year may not perfectly align, so it's okay to read ahead if you did not find everything mentioned.
+- Complete readings in Module 2: Looking Inside Classes accessible through the course portal or directly on the web.
+- Review the OLI material and tasks up to this module.
 
 ## Learning Goals
+This week, you'll learn how to:
+* Design Java classes with proper attributes and methods
+* Implement constructors, getters, and setters in Java
+* Manipulate objects using the dot operator
+* Understand and utilize the main method and printing in Java
+* Grasp the concept of scope and variable shadowing in Java
 
-The goals for this week include understanding how to:
-- Design Java classes.
-- Implement fields and methods within a class.
-- Utilize the `main` method for testing.
-- Understand the concept of object encapsulation.
-- Manage object interaction within a Java application.
+## Assignment Overview
 
-## Troubleshooting Guide
+In the lush forests of the DinoPark, several species of dinosaurs roam freely. Your task is to model these dinosaurs in Java, creating a digital representation of these ancient creatures.
 
-1. Browse the [posted questions](https://forum.example.com/issues) related to this week's assignment. Are others experiencing the same issue?
-2. If not, create a [New Question](https://forum.example.com/issues/new) with a descriptive title beginning with "Week *x*: *summary of problem*".
-3. Seek out further help at the [weekly help sessions](https://helpsessions.example.com) hosted by our team.
+### Task 1: Creating Your Dinosaur Class
 
-Collaboration with peers is encouraged, but please avoid sharing exact solutions.
+Start by creating a new Java file called `Dinosaur.java` in your project's `src` folder. This file will contain the `Dinosaur` class, which will serve as the blueprint for creating dinosaur objects.
 
-## Assignment Details
+Your dinosaurs should have the following characteristics, which will be represented as fields in the class:
+- `String` speciesName
+- `int` age
+- `int` health
+- `int` strength
+- `boolean` isHungry
 
-Your journey through the galactic frontier begins with the creation of unique Galaxy Pets crafted from the essence of cosmic phenomena. Dive into this universe by modeling these creatures in Java. Let your imagination run wild; perhaps a Starlion with the roar of a collapsing star, or a Nebulupi, a wolf made from the gas of a nebulous cloud.
+Add these fields to your class. Do not assign any values to them yet as their values will be specific to each dinosaur object you create.
 
-### Task 1: Class Creation
+### Task 2: Constructing a Dinosaur
 
-Start by creating a file named `GalaxyPet.java` inside the `src` directory. Declare the GalaxyPet class within this file.
+Next, you'll create a constructor for the `Dinosaur` class. This constructor should take parameters for each of the fields you've defined and assign them to the corresponding fields of the class.
 
-### Task 2: Defining Properties
+Once you've written your constructor, create a dinosaur object in your class's main method. For example, you could create a Tyrannosaurus Rex named "Rex" who is 15 years old, has a health of 100, a strength of 80, and is currently hungry.
 
-Our Galaxy Pets need characteristics. Define the following fields within the GalaxyPet class, without assigning any initial values:
+### Task 3: Using Getters and Setters
 
-- String name
-- int energyLevel
-- int cosmicPower
-- int speed
-- boolean asleep
+To promote good encapsulation practices, modify your dinosaur class by setting the access modifier of all fields to `private`. Then, create getter and setter methods for each field. These methods will control access to the fields, allowing you to read and modify their values safely from outside the class.
 
-### Task 3: Spawning Galaxy Pets
+### Task 4: Creating More Dinosaurs
 
-In the `main` method of your GalaxyPet class, create and instantiate a "Starlion" with initial values for its characteristics. Use the dot operator to set these attributes directly for now.
+With your class structure in place, create two more dinosaur objects of different species in the main method. Use the constructor to set their initial properties.
 
-### Task 4: Encapsulation with Getters and Setters
+### Task 5: Implement a Feed Method
 
-To encapsulate the inner workings of our Galaxy Pets, change the access modifiers of your fields to `private`. Then, implement getters and setters for each property.
+Dinosaurs need to eat! Write a method named `feedDinosaur` that accepts a `Dinosaur` object as its parameter. This method should simulate feeding the dinosaur, thus setting its `isHungry` field to `false`. It should also print a message indicating that the dinosaur has been fed.
 
-### Task 5: Constructing with Constructors
+### Task 6: Dinosaurs Roaring
 
-Implement a constructor for the GalaxyPet class that allows setting all characteristics upon instantiation. Create a second pet, "Nebulupi", using this constructor.
+Add a method to the `Dinosaur` class that simulates the dinosaur making a roaring sound. The method, named `roar`, doesn't need to return anything but should print a message to the console that includes the species name of the dinosaur and a roaring sound.
 
-### Task 6: Display Information
+### Task 7: Understand Scope and Shadowing
 
-Create a method named `displayInfo` within the GalaxyPet class that prints out all information about the pet to the console.
+Review examples of variable shadowing provided in the course material, and be prepared to discuss these concepts as they relate to your `Dinosaur` class. Pay special attention to the use of the `this` keyword to distinguish between class fields and method parameters with the same name.
 
-### Task 7: The Cosmic Challenge
+## Submission Checklist
+- Create the `Dinosaur` class with the specified fields.
+- Implement a constructor that initializes all fields of the class.
+- Add getter and setter methods for each field.
+- Create two additional dinosaur objects using your class.
+- Implement and test the `feedDinosaur` method.
+- Implement and test the `roar` method.
+- Review and understand the examples of scope and variable shadowing.
 
-Galaxy Pets can challenge each other to cosmic duels. Implement a method named `challenge` where one pet can challenge another. The outcome will determine which pet gains cosmic power. Incorporate simple logic based on your chosen attributes.
+## Troubleshooting
+If you encounter issues, first review the posted questions. If your question hasn't been addressed, create a new issue with a descriptive title based on the problem you're experiencing.
 
-### Task 8: Understanding Scope and Shadowing
-
-Review examples of scope and variable shadowing provided in the reading materials. Be prepared to adjust your implementation if necessary, focusing on proper usage of the `this` keyword.
-
-## Final Checklist
-
-- [ ] Created and developed the GalaxyPet class with fields and methods.
-- [ ] Utilized getters and setters for encapsulation.
-- [ ] Implemented constructors for easy object instantiation.
-- [ ] Developed a method displaying a pet's info.
-- [ ] Enabled Galaxy Pets to challenge each other.
-
-## Bugs and Errors?
-
-If you encounter any inconsistencies or errors with this assignment, please report them by creating a [New Issue](https://forum.example.com/issues/new) with the title "Week *x* Error: *summary of error here*". Contributors identifying bugs will be acknowledged.
-
-
-This personalized task should help the student understand the same core programming concepts as the model task, framed around an engaging theme of collecting and training cosmic creatures.
+## Bugs and Feedback
+If you discover any bugs in this exercise or have feedback, please open a new issue with a descriptive title reflecting the problem or feedback.
